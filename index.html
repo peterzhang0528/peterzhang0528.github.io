@@ -1,37 +1,119 @@
-import React from 'react';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陆向谦AI训练营 | 培养下一代AI领袖</title>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ffc107;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--secondary-color);
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: white;
+            border-radius: 5px;
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .cta-button {
+            display: block;
+            width: 100%;
+            background-color: var(--accent-color);
+            color: var(--text-color);
+            padding: 1rem;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #e0a800;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>陆向谦AI训练营</h1>
+        </header>
 
-const AITrainingCamp = () => {
-  const handlePayment = () => {
-    window.open('https://buy.stripe.com/8wMeWieDU41Td5S9AF', '_blank');
-  };
+        <div class="section" id="intro">
+            <h2>关于我们</h2>
+            <p>陆向谦实验室由清华大学教授、硅谷创新专家陆向谦博士创立，致力于培养下一代AI人才。我们的使命是将顶尖的AI教育带给每一位有志于在人工智能领域发展的学员。</p>
+        </div>
 
-  return (
-    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-center text-gray-900 mb-4">
-          陆向谦实验室 AI 训练营
-        </h1>
-        <p className="text-center text-xl text-gray-600 mb-8">培养创新时代少年英才</p>
-        
-        {/* 其他卡片内容保持不变 */}
-        
-        <Card>
-          <CardHeader>
-            <CardTitle>立即报名</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-gray-600 mb-4">名额有限，请尽快报名！点击下方按钮进入支付页面。</p>
-          </CardContent>
-          <CardFooter>
-            <Button className="w-full" onClick={handlePayment}>立即报名并支付</Button>
-          </CardFooter>
-        </Card>
-      </div>
+        <div class="section" id="highlights">
+            <h2>课程亮点</h2>
+            <ul>
+                <li>由陆向谦教授亲自授课，深入浅出讲解AI核心概念</li>
+                <li>结合理论与实践的前沿AI课程，让学习更加生动有趣</li>
+                <li>限量招生，确保每位学员都能得到充分的关注和指导</li>
+                <li>直接对接硅谷最新AI技术和思维，开拓国际视野</li>
+            </ul>
+        </div>
+
+        <div class="section" id="cta">
+            <a href="https://buy.stripe.com/8wMeWieDU41Td5S9AF" class="cta-button">立即报名参加陆向谦AI训练营</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 陆向谦实验室. 保留所有权利。</p>
+        </footer>
     </div>
-  );
-};
-
-export default AITrainingCamp;
+</body>
+</html>
