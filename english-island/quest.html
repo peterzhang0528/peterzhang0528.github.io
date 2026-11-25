@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#102033">
+  <title>英语方块岛 · 冒险闯关岛 Island Quest</title>
+  <link rel="stylesheet" href="./quest.css">
+</head>
+<body>
+<main class="quest-app" id="quest-app" lang="en">
+  <canvas id="quest-world" tabindex="0" aria-label="Island Quest. Move with WASD or arrow keys, Space to jump, Shift to turbo dash, or tap to walk."></canvas>
+
+  <header class="hud-top">
+    <div class="hud-left">
+      <a class="hud-btn" id="quest-exit" href="./" lang="zh-CN">← 首页</a>
+      <div class="stat-pill stat-rank" id="rank-pill">Lv.1 Rookie</div>
+      <div class="stat-pill stat-coins" id="coin-pill">🪙 <span id="coin-count">0</span></div>
+      <div class="stat-pill stat-combo" id="combo-pill" hidden>🔥 x2</div>
+    </div>
+
+    <div class="mission-bar" id="mission-bar" aria-label="Missions" hidden>
+      <button class="mission-tab" type="button" data-mission="rush">🍎 Rush</button>
+      <button class="mission-tab" type="button" data-mission="race">🏁 Race</button>
+      <button class="mission-tab" type="button" data-mission="raid">💎 Raid</button>
+    </div>
+
+    <div class="hud-right">
+      <button class="hud-btn" id="sound-button" type="button" aria-pressed="false">🔊</button>
+      
+    </div>
+  </header>
+
+  <section class="quest-tracker" id="quest-tracker" hidden>
+    <div class="tracker-head">
+      <strong id="mission-title">Golden Apple Rush</strong>
+      <span class="radar-chip" id="radar-chip" hidden>COLD ❄️</span>
+    </div>
+    <p id="mission-goal">Collect apples &amp; coins!</p>
+    <div class="badge-row" id="badge-row" aria-label="Badges"></div>
+  </section>
+
+  <div class="banner-toast" id="banner-toast" role="status" hidden></div>
+
+  <div class="bubble bubble-mia" id="bubble-mia" hidden></div>
+  <div class="bubble bubble-leo" id="bubble-leo" hidden></div>
+  <div class="bubble bubble-player" id="bubble-player" hidden></div>
+
+  <section class="comms-dock" id="comms-dock" aria-label="Quick Comms" hidden>
+    <div class="comms-list" id="comms-list"></div>
+  </section>
+
+  <div class="action-pad" id="action-pad" hidden>
+    <button class="act-btn act-dash" id="dash-btn" type="button">⚡ DASH<small>Shift</small></button>
+    <button class="act-btn act-jump" id="jump-btn" type="button">⬆ JUMP<small>Space</small></button>
+  </div>
+
+  <div class="stick" id="stick" aria-hidden="true" hidden><i id="stick-knob"></i></div>
+
+  <section class="start-panel" id="start-panel" lang="zh-CN" aria-labelledby="start-title">
+    <div class="start-card">
+      <p class="eyebrow">ISLAND QUEST · 三年级冒险闯关版</p>
+      <h1 id="start-title">和 Mia、Leo 组队开黑！</h1>
+      <p class="lead">冲刺抢金苹果、踩加速光环飙车、雷达寻宝开龙晶！全程像打游戏一样和美国小伙伴开黑，边玩边磨耳朵。</p>
+      <div class="feature-grid">
+        <div class="feat"><span>⚡</span><b>跳跃 + 冲刺</b><small>Space 跳 / Shift 飙车</small></div>
+        <div class="feat"><span>🍎</span><b>金苹果连击</b><small>抢金币刷 Combo</small></div>
+        <div class="feat"><span>💎</span><b>雷达大寻宝</b><small>开宝箱解锁稀有徽章</small></div>
+      </div>
+      <button class="play-btn" id="start-play" type="button">🚀 开始冒险 · PLAY!</button>
+      <div class="start-links">
+        
+        
+        <a href="./">返回首页</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="quest-loading" id="quest-loading" role="status" lang="zh-CN">正在加载冒险岛…</div>
+  <div class="quest-fallback" id="quest-fallback" role="alert" lang="zh-CN" hidden>
+    <h2>冒险岛暂时没有打开</h2>
+    <p>请刷新页面再试一次。</p>
+    <a href="./">回到英语方块岛</a>
+  </div>
+</main>
+<script type="module" src="./js/bootstrap-quest.js"></script>
+</body>
+</html>

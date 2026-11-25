@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0f2034">
+  <title>英语方块岛 · English Island 新关试玩合集</title>
+  <style>
+    :root {
+      --bg: #0c1b2e;
+      --card: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.16);
+      --text: #f4f8ff;
+      --muted: #b6cbe3;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at 20% 10%, #1d3c63 0%, #0c1b2e 55%, #07111e 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px 40px;
+    }
+    .wrap {
+      width: 100%;
+      max-width: 980px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(94, 214, 255, 0.14);
+      border: 1px solid rgba(94, 214, 255, 0.35);
+      color: #8ee6ff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+    h1 {
+      margin: 12px 0 8px;
+      font-size: clamp(26px, 5vw, 40px);
+      line-height: 1.2;
+    }
+    .lead {
+      margin: 0 auto;
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 18px;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 22px;
+      border-radius: 20px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+    }
+    .card:hover, .card:focus-visible {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.45);
+      background: rgba(255, 255, 255, 0.12);
+      outline: none;
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    .tag-little { background: rgba(126, 232, 168, 0.18); color: #8ff5b8; }
+    .tag-quest { background: rgba(255, 198, 92, 0.2); color: #ffd479; }
+    .tag-rescue { background: rgba(102, 204, 255, 0.2); color: #8ad8ff; }
+    .card h2 {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.3;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+      flex: 1;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 16px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 15px;
+      margin-top: 4px;
+    }
+    .cta-little { background: #38c172; color: #072011; }
+    .cta-quest { background: #ffb830; color: #241500; }
+    .cta-rescue { background: #4cc3ff; color: #051c2c; }
+    footer {
+      margin-top: 26px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    footer a {
+      color: #8ee6ff;
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <span class="eyebrow">ENGLISH ISLAND · 公开试玩合集</span>
+      <h1>英语方块岛 · 三大新冒险</h1>
+      <p class="lead">不用登录，打开就能玩。选一关和说英语的小伙伴 Mia、Leo 一起边玩边磨耳朵！</p>
+    </header>
+
+    <section class="grid" aria-label="游戏入口">
+      <a class="card" href="./little-island.html" id="entry-little">
+        <span class="tag tag-little">🐑 5岁左右 · 低龄哄娃版</span>
+        <h2>Little Island · 点哪玩哪小岛</h2>
+        <p>零识字、零键盘门槛。点小羊、苹果、小船、花朵或水面，角色和伙伴一起跑过去触发动画、音效和慢速英文短句，发呆还会主动哄着玩。</p>
+        <span class="cta cta-little">进入低龄小岛 →</span>
+      </a>
+
+      <a class="card" href="./quest.html" id="entry-quest">
+        <span class="tag tag-quest">⚡ 三年级 · 冒险闯关版</span>
+        <h2>Island Quest · 跳跃冲刺与寻宝</h2>
+        <p>WASD/摇杆 + Space 跳跃 + Shift 加速冲刺。支持抢金苹果连击（Rush）、光环飙车（Race）和 COLD/HOT 雷达寻宝（Raid），和队友一键发英文开黑语音。</p>
+        <span class="cta cta-quest">进入冒险闯关岛 →</span>
+      </a>
+
+      <a class="card" href="./rescue.html" id="entry-rescue">
+        <span class="tag tag-rescue">🚨 六年级 · 合作救援关</span>
+        <h2>Lighthouse Rescue · 灯塔救援</h2>
+        <p>一艘船迷失在迷雾中。用英语指挥工程师 Mia 和观察员 Leo 修桥、双人供电、辨认信号灯并转动光束，把船安全带回港口。</p>
+        <span class="cta cta-rescue">进入灯塔救援 →</span>
+      </a>
+    </section>
+
+    <footer>
+      想玩十关经典主线？<a href="https://english-island-zhang-1109.lulabs.chatgpt.site">前往英语方块岛主站 →</a>
+    </footer>
+  </main>
+</body>
+</html>

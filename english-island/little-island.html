@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#bfe0e6">
+  <title>英语方块岛 · 5岁哄娃模式 Little Island</title>
+  <link rel="stylesheet" href="./little-island.css">
+</head>
+<body>
+<main class="little-app" id="little-app" lang="en">
+  <canvas id="little-world" tabindex="0" aria-label="Little Island. Tap anywhere to walk and play with Mia and Leo."></canvas>
+
+  <header class="hud-top">
+    <a class="hud-pill" id="little-exit" href="./buddies.html" lang="zh-CN">← 返回</a>
+    <div class="hud-right">
+      <span class="hud-pill star-pill" id="star-count" hidden aria-live="polite">✦ 0</span>
+      <button class="hud-pill sound-pill" id="sound-button" type="button" hidden aria-pressed="false" lang="zh-CN">🔊 声音开</button>
+    </div>
+  </header>
+
+  <div class="bubble bubble-mia" id="bubble-mia" hidden></div>
+  <div class="bubble bubble-leo" id="bubble-leo" hidden></div>
+
+  <div class="word-toast" id="word-toast" hidden aria-live="polite"></div>
+
+  <nav class="play-dock" id="play-dock" hidden aria-label="Tap a place to play">
+    <button type="button" class="dock-btn" data-place="sheep" aria-label="Sheep"><span>🐑</span><small>sheep</small></button>
+    <button type="button" class="dock-btn" data-place="tree" aria-label="Apple tree"><span>🍎</span><small>apple</small></button>
+    <button type="button" class="dock-btn" data-place="boat" aria-label="Boat"><span>⛵</span><small>boat</small></button>
+    <button type="button" class="dock-btn" data-place="bridge" aria-label="Bridge and water"><span>💦</span><small>water</small></button>
+    <button type="button" class="dock-btn" data-place="flowers" aria-label="Flowers"><span>🌸</span><small>flowers</small></button>
+    <button type="button" class="dock-btn" data-place="lighthouse" aria-label="Lighthouse"><span>💡</span><small>light</small></button>
+    <button type="button" class="dock-btn" data-place="rock" aria-label="Big rock"><span>🪨</span><small>rock</small></button>
+    <button type="button" class="dock-btn" data-place="chest" aria-label="Treasure chest"><span>🎁</span><small>star</small></button>
+  </nav>
+
+  <section class="panel" id="start-panel" lang="zh-CN" aria-labelledby="start-title">
+    <div class="panel-card">
+      <p class="eyebrow">LITTLE ISLAND · 5岁哄娃模式</p>
+      <h1 id="start-title">点一点，和小岛一起玩！</h1>
+      <div class="kids" aria-hidden="true">
+        <span class="kid kid-mia"><i></i>Mia</span>
+        <span class="kid kid-leo"><i></i>Leo</span>
+        <span class="kid kid-you"><i></i>宝贝</span>
+      </div>
+      <p class="desc">不用键盘、不用识字。点草地就跑过去，点小羊、苹果树、小船、花朵、水面或小伙伴，就能一起玩并听见轻松简短的英文。</p>
+      <button class="play-button" id="start-play" type="button">开始玩 · Let's Play!</button>
+      <div class="panel-links">
+        <a href="./buddies.html">切换到小学生伙伴小岛</a>
+        <a href="./">回到英语方块岛首页</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="little-loading" id="little-loading" role="status" lang="zh-CN">正在铺好阳光小岛…</div>
+  <div class="little-fallback" id="little-fallback" role="alert" lang="zh-CN" hidden>
+    <h2>小岛暂时没有打开</h2>
+    <p>请稍后刷新再试。</p>
+    <a href="./">回到英语方块岛</a>
+  </div>
+</main>
+<script type="module" src="./js/bootstrap-little-island.js"></script>
+</body>
+</html>
